@@ -22,7 +22,7 @@ spring:
             scope: openid, profile, email
         provider:
           keycloak:
-            issuer-uri: http://localhost:7777/auth/realms/users
+            issuer-uri: http://localhost:7777/realms/users
     
 
 server:
