@@ -18,7 +18,7 @@ spring:
           keycloak:
             client-id: user_service_client_id
             client-secret: yp1ZmQE3EOBntaO83qaQ5QBUhmYRL9Ii
-            authorization-grant-type: authorization_code
+            authorization-grant-type: password
             scope: openid, profile, email
         provider:
           keycloak:
