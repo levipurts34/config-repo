@@ -11,5 +11,19 @@ spring:
     show-sql: true
   main:
     web-application-type: servlet
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: user_service_client_id
+            client-secret: yp1ZmQE3EOBntaO83qaQ5QBUhmYRL9Ii
+            authorization-grant-type: authorization_code
+            scope: openid, profile, email
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:7777/auth/realms/users
+    
+
 server:
   port: 8000
