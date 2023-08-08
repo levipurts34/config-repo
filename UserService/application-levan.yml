@@ -23,6 +23,8 @@ spring:
             authorization_endpoint: http://localhost:7777/realms/users/protocol/openid-connect/auth
             token_endpoint: http://localhost:7777/realms/users/protocol/openid-connect/token
             issuer_endpoint: http://localhost:7777/realms/users
+            auth-server-url: http://localhost:7777
+            realm: users
         provider:
           keycloak:
             issuer-uri: http://localhost:7777/realms/users
@@ -37,3 +39,8 @@ eureka:
       defaultZone: http://localhost:8002/eureka
   instance:
     hostname: localhost
+minio:
+  endpoint: http://localhost:9000
+  access-key: access_key
+  secret-key: secret-key
+
