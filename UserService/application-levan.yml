@@ -41,7 +41,7 @@ eureka:
     hostname: localhost
 minio:
   endpoint: http://localhost:9000
-  access-key: access_key
-  secret-key: secret-key
+  access-key: nW9WhDcysq8sSZgMzvDt
+  secret-key: 057LiUahLyDij05dkNC6j3aRz9FYXjP6mJKFiuJp
   bucket-name: pictures
 
