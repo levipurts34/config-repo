@@ -11,3 +11,12 @@ spring:
     show-sql: true
   main:
     web-application-type: servlet
+server:
+  port: 8001
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8002/eureka
+  instance:
+    hostname: localhost
