@@ -20,3 +20,10 @@ eureka:
       defaultZone: http://localhost:8002/eureka
   instance:
     hostname: localhost
+
+minio:
+  endpoint: http://localhost:9000
+  access-key: nW9WhDcysq8sSZgMzvDt
+  secret-key: 057LiUahLyDij05dkNC6j3aRz9FYXjP6mJKFiuJp
+  bucket-name: tasks
+  pictures-url: http://localhost:9001/browser/tasks/
