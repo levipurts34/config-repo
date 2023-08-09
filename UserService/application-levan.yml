@@ -44,4 +44,5 @@ minio:
   access-key: nW9WhDcysq8sSZgMzvDt
   secret-key: 057LiUahLyDij05dkNC6j3aRz9FYXjP6mJKFiuJp
   bucket-name: pictures
+  pictures-url: http://localhost:9001/browser/pictures/
 
