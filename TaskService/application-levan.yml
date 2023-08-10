@@ -1,6 +1,8 @@
 spring:
   kafka:
     bootstrap-servers: localhost:9093
+  consumer:
+    group-id: groupId
   security:
       oauth2:
         client:
