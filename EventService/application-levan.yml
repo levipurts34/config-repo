@@ -6,6 +6,23 @@ spring:
     username: levani
     password: Aa12345.
     driver-class-name: org.postgresql.Driver
+  security:
+      oauth2:
+        client:
+          registration:
+            keycloak:
+              client-id: user_service_client_id
+              client-secret: yp1ZmQE3EOBntaO83qaQ5QBUhmYRL9Ii
+              authorization-grant-type: password
+              scope: openid, profile, email
+              authorization_endpoint: http://localhost:7777/realms/users/protocol/openid-connect/auth
+              token_endpoint: http://localhost:7777/realms/users/protocol/openid-connect/token
+              issuer_endpoint: http://localhost:7777/realms/users
+              auth-server-url: http://localhost:7777
+              realm: users
+          provider:
+            keycloak:
+              issuer-uri: http://localhost:7777/realms/users
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
