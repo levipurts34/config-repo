@@ -1,3 +1,44 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
+      - id: user-service
+        uri:  lb://UserService
+        predicates:
+          Path=/userService/**
+      - id: task-service
+        uri:  lb://TaskService
+        predicates:
+          Path=/taskService/**
+      - id: event-service
+        uri: lb://EventService
+        predicates:
+          Path=/eventService/**
+      - id: notification-service
+        uri: lb://NotificationService
+        predicates:
+          Path=/notificationService/**
+
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    config-url: /v3/api-docs/swagger-config
+    urls:
+      - url: /user-service/v3/api-docs
+        name: userService
+      - url: /task-service/v3/api-docs
+        name: taskService
+      - url: /event-service/v3/api-docs
+        name: eventService
+
 eureka:
   client:
     register-with-eureka: true
