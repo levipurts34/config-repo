@@ -47,4 +47,8 @@ minio:
   secret-key: 057LiUahLyDij05dkNC6j3aRz9FYXjP6mJKFiuJp
   bucket-name: pictures
   pictures-url: http://localhost:9001/browser/pictures/
-
+springdoc:
+  api-docs:
+    path: /user-service/v3/api-docs
+  swagger-ui:
+    path: /user-service/swagger-ui.html
