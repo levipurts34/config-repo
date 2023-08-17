@@ -1,4 +1,35 @@
 spring:
+    quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    properties:
+      org.quartz.scheduler.instanceName: MyScheduler
+      org.quartz.scheduler.instanceId: AUTO
+      org.quartz.jobStore.class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      org.quartz.jobStore.driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+      org.quartz.jobStore.tablePrefix: QRTZ_
+      org.quartz.jobStore.isClustered: true
+      org.quartz.jobStore.clusterCheckinInterval: 20000
+      org.quartz.threadPool.class: org.quartz.simpl.SimpleThreadPool
+      org.quartz.threadPool.threadCount: 25
+      org.quartz.threadPool.threadPriority: 5
+      org.quartz.threadPool.threadsInheritContextClassLoaderOfInitializingThread: true
+      org.quartz.jobStore.misfireThreshold: 60000
+      org.quartz.jobStore.maxMisfiresToHandleAtATime: 1
+      org.quartz.jobStore.txIsolationLevelSerializable: true
+      org.quartz.jobStore.acquireTriggersWithinLock: true
+      org.quartz.jobStore.selectWithLockSQL: SELECT * FROM {0}LOCKS UPDLOCK WHERE LOCK_NAME = ?
+      org.quartz.jobStore.useProperties: false
+      org.quartz.jobStore.dataSource: database4
+      org.quartz.dataSource.database4.driver: org.postgresql.Driver
+      org.quartz.dataSource.database4.URL: jdbc:postgresql://localhost:5432/postgres
+      org.quartz.dataSource.database4.user: levani
+      org.quartz.dataSource.database4.password: Aa12345.
+      org.quartz.dataSource.database4.maxConnections: 5
+      org.quartz.dataSource.database4.validationQuery: select 0
+      org.quartz.dataSource.database4.idleConnectionValidationSeconds: 300
+
   mail:
     host: smtp.gmail.com
     port: 587
