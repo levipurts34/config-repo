@@ -1,3 +1,8 @@
+springdoc:
+  api-docs:
+    path: /event-service/v3/api-docs
+  swagger-ui:
+    path: /event-service/swagger-ui.html
 spring:
   kafka:
     bootstrap-servers: localhost:9093
@@ -39,3 +44,4 @@ eureka:
       defaultZone: http://localhost:8002/eureka
   instance:
     hostname: localhost
+
